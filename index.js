@@ -1,5 +1,18 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  // Write your algorithm 
+   // iterate from the beginning of the string to the middle of the string
+   newArray = []
+   for (let i = word.length ; i > 0; i--) {
+
+
+    newArray[word.length - i] = word[i - 1]
+
+    // if the letters don't match, return false
+  }
+
+  return newArray.join("") === word;
+
+  // if we reach the middle, and all the letters match, return true
 }
 
 /* 
@@ -20,6 +33,7 @@ if (require.main === module) {
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
+
 }
 
 module.exports = isPalindrome;
